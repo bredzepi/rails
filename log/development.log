@@ -293,3 +293,172 @@ Processing by StaticPagesController#contact as HTML
 Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 66.58.246.230 at 2017-06-28 05:54:02 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 405ms (Views: 397.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/index" for 66.58.246.230 at 2017-06-28 05:54:19 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 66.58.246.230 at 2017-06-28 05:54:24 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 05:59:17 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 368ms (Views: 358.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:00:42 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 400ms (Views: 388.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:01:26 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 413ms (Views: 403.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:39:40 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (192.4ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "panorama.jpg" is not present in the asset pipeline.):
+    1: <h1>Welcome to Bike Berlin</h1>
+    2: <h2>Your source for used bikes in Berlin</h2>
+    3: <p>Welcome! The date and time is <%= Time.now %></p>
+    4: <%= image_tag("panorama.jpg") %>
+  
+app/views/static_pages/index.html.erb:4:in `_app_views_static_pages_index_html_erb___180118883397632872_35699520'
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:41:05 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (608.3ms)
+Completed 500 Internal Server Error in 622ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...ack" => true %>": expected "{", was ""):
+    1: <h1>Welcome to Bike Berlin</h1>
+    2: <h2>Your source for used bikes in Berlin</h2>
+    3: <p>Welcome! The date and time is <%= Time.now %></p>
+    4: <%= image_tag("image2.jpg") %>
+  
+app/assets/stylesheets/static_pages.scss:11
+app/views/static_pages/index.html.erb:4:in `_app_views_static_pages_index_html_erb___2440939360259963676_36778500'
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:41:38 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (121.5ms)
+Completed 200 OK in 198ms (Views: 197.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:48:50 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/static_pages/index.html.erb:4: syntax error, unexpected '='
+...image_tag("image2.jpg", class = "img-responsive") );
+...                               ^
+/home/ubuntu/workspace/app/views/static_pages/index.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+...g", class = "img-responsive") );
+...                               ^):
+  
+app/views/static_pages/index.html.erb:4: syntax error, unexpected '='
+app/views/static_pages/index.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:49:29 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:49:32 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:49:33 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:49:34 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:49:34 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 174ms (Views: 172.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:49:35 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.58.246.230 at 2017-06-28 06:49:36 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
