@@ -644,3 +644,45 @@ ActionView::Template::Error (undefined local variable or method `f' for #<#<Clas
 app/views/products/_form.html.erb:34:in `block in _app_views_products__form_html_erb__2481239296790667279_70092712351040'
 app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb__2481239296790667279_70092712351040'
 app/views/products/edit.html.erb:3:in `_app_views_products_edit_html_erb__2958249477351027873_70092712337160'
+Started GET "/" for 209.58.136.217 at 2017-09-30 15:18:47 +0000
+Cannot render console from 209.58.136.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (185.8ms)
+Completed 200 OK in 249ms (Views: 241.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 209.58.136.217 at 2017-09-30 15:18:56 +0000
+Cannot render console from 209.58.136.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (118.6ms)
+Completed 200 OK in 196ms (Views: 183.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/products/1/edit" for 209.58.136.217 at 2017-09-30 15:18:59 +0000
+Cannot render console from 209.58.136.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (274.7ms)
+  Rendered products/edit.html.erb within layouts/application (276.2ms)
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00000002b4ef68>:0x007fa49d5d3b50>):
+    27:   </div>
+    28:   
+    29:   <div class="field">
+    30:     <%= f.label :color %><br>
+    31:     <%= f.text_field :color %>
+    32:   </div>
+    33: 
+  
+app/views/products/_form.html.erb:30:in `block in _app_views_products__form_html_erb___1311053204892331697_70172495811060'
+app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb___1311053204892331697_70172495811060'
+app/views/products/edit.html.erb:3:in `_app_views_products_edit_html_erb___2551944059924541813_70172495383040'
