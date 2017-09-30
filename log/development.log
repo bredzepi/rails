@@ -602,3 +602,45 @@ Migrating to AddColorToProducts (20170930145525)
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5168794849566389475)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 209.58.136.217 at 2017-09-30 15:12:01 +0000
+Cannot render console from 209.58.136.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (222.7ms)
+Completed 200 OK in 326ms (Views: 318.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 209.58.136.217 at 2017-09-30 15:12:17 +0000
+Cannot render console from 209.58.136.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 159ms (Views: 149.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/products/1/edit" for 209.58.136.217 at 2017-09-30 15:12:21 +0000
+Cannot render console from 209.58.136.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (243.7ms)
+  Rendered products/edit.html.erb within layouts/application (245.3ms)
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f7f74f410f0>:0x007f7f7670b438>):
+    31:   </div>
+    32:   
+    33:   <div class="field">
+    34:     <%= f.label :color %><br>
+    35:     <%= f.text_field :color %>
+    36:   </div>
+    37: <% end %>
+  
+app/views/products/_form.html.erb:34:in `block in _app_views_products__form_html_erb__2481239296790667279_70092712351040'
+app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb__2481239296790667279_70092712351040'
+app/views/products/edit.html.erb:3:in `_app_views_products_edit_html_erb__2958249477351027873_70092712337160'
