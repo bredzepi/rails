@@ -3122,3 +3122,22 @@ Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
 SyntaxError (/home/ubuntu/workspace/app/views/products/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input):
   
 app/views/products/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 37.25.87.69 at 2017-10-16 11:32:03 +0000
+Cannot render console from 37.25.87.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 337ms (Views: 314.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 37.25.87.69 at 2017-10-16 11:35:18 +0000
+Cannot render console from 37.25.87.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 86ms (Views: 78.3ms | ActiveRecord: 6.6ms)
+
+
