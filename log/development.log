@@ -3800,3 +3800,349 @@ Processing by StaticPagesController#landing_page as HTML
 Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 188.44.22.114 at 2017-10-22 20:00:59 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+pg (0.21.0) lib/pg.rb:56:in `initialize'
+pg (0.21.0) lib/pg.rb:56:in `new'
+pg (0.21.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:695:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 188.44.22.114 at 2017-10-22 20:01:42 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (7.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 421ms (Views: 394.3ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:01:46 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 150ms (Views: 147.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 188.44.22.114 at 2017-10-22 20:02:23 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 212ms (Views: 209.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:02:26 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:02:46 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 111ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 188.44.22.114 at 2017-10-22 20:03:12 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 307ms (Views: 290.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:03:16 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 188.44.22.114 at 2017-10-22 20:04:28 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 182ms (Views: 175.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:04:33 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:04:35 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 225ms (Views: 223.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:04:36 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 128ms (Views: 127.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:04:36 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 149ms (Views: 147.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:04:37 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 146ms (Views: 144.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/index" for 188.44.22.114 at 2017-10-22 20:04:38 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 181ms (Views: 179.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/products" for 188.44.22.114 at 2017-10-22 20:04:41 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/products"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/static_pages/index" for 188.44.22.114 at 2017-10-22 20:04:44 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:04:47 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:04:49 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:06:34 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 391ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `products_index_path' for #<#<Class:0x000000036d5558>:0x000000035dc188>
+Did you mean?  products_path):
+    31:           <div class="navbar-collapse collapse">
+    32:             <ul class="nav navbar-nav navbar-right">
+    33:               <li><%= link_to "Home", static_pages_index_path %></li>
+    34:               <li><%= link_to "Products", products_index_path %></li>
+    35:               <li><%= link_to "About", static_pages_about_path %></li>
+    36:               <li><%= link_to "Contact", static_pages_contact_path %></li>
+    37:             </ul>
+  
+app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb__1206860320159974011_28108160'
+Started GET "/" for 188.44.22.114 at 2017-10-22 20:06:43 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 456ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `products_index_path' for #<#<Class:0x000000036d5558>:0x007f94adde4600>
+Did you mean?  products_path):
+    31:           <div class="navbar-collapse collapse">
+    32:             <ul class="nav navbar-nav navbar-right">
+    33:               <li><%= link_to "Home", static_pages_index_path %></li>
+    34:               <li><%= link_to "Products", products_index_path %></li>
+    35:               <li><%= link_to "About", static_pages_about_path %></li>
+    36:               <li><%= link_to "Contact", static_pages_contact_path %></li>
+    37:             </ul>
+  
+app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb__1206860320159974011_70138274381460'
+Started GET "/" for 188.44.22.114 at 2017-10-22 20:11:49 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 363ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `products_index_path' for #<#<Class:0x000000036d5558>:0x007f94b8169cd0>
+Did you mean?  products_path):
+    31:           <div class="navbar-collapse collapse">
+    32:             <ul class="nav navbar-nav navbar-right">
+    33:               <li><%= link_to "Home", static_pages_index_path %></li>
+    34:               <li><%= link_to "Products", products_index_path %></li>
+    35:               <li><%= link_to "About", static_pages_about_path %></li>
+    36:               <li><%= link_to "Contact", static_pages_contact_path %></li>
+    37:             </ul>
+  
+app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb__1206860320159974011_70138360320020'
+Started GET "/" for 188.44.22.114 at 2017-10-22 20:11:58 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 106ms (Views: 103.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/static_pages/contact" for 188.44.22.114 at 2017-10-22 20:12:02 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 135ms (Views: 133.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/about" for 188.44.22.114 at 2017-10-22 20:12:03 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/index" for 188.44.22.114 at 2017-10-22 20:12:04 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/index" for 188.44.22.114 at 2017-10-22 20:12:15 +0000
+Cannot render console from 188.44.22.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `products_index_path' for #<#<Class:0x000000036d5558>:0x007f94ad7fd368>
+Did you mean?  products_path):
+    31:           <div class="navbar-collapse collapse">
+    32:             <ul class="nav navbar-nav navbar-right">
+    33:               <li><%= link_to "Home", static_pages_index_path %></li>
+    34:               <li><%= link_to "Products", products_index_path %></li>
+    35:               <li><%= link_to "About", static_pages_about_path %></li>
+    36:               <li><%= link_to "Contact", static_pages_contact_path %></li>
+    37:             </ul>
+  
+app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb__1206860320159974011_70138271303320'
