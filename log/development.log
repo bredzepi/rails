@@ -4323,3 +4323,496 @@ Processing by StaticPagesController#landing_page as HTML
 Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 77.28.49.250 at 2017-10-26 11:26:45 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 193ms (Views: 191.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 77.28.49.250 at 2017-10-26 11:35:56 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [4 times] (1.7ms)
+  Rendered products/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 126ms (Views: 123.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/4/edit" for 77.28.49.250 at 2017-10-26 11:36:04 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (89.8ms)
+  Rendered products/edit.html.erb within layouts/application (93.5ms)
+Completed 200 OK in 152ms (Views: 121.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/new" for 77.28.49.250 at 2017-10-26 11:36:13 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.4ms)
+  Rendered products/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 185ms (Views: 182.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 77.28.49.250 at 2017-10-26 11:36:49 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5BQQCJCw3+bFH7rRoUNZxQK9AovyjpkA38ERLPzSAlG3AgVa8rquDnx5i7wK0vSRbpnfriKYqfQQ42AtCx7w8w==", "product"=>{"name"=>"5.2 New Product added", "description"=>"", "image_url"=>"2017-10-26T11:12:20.617289+00:00 app[web.1]: I, [2017-10-26T11:12:20.616996 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b] Started GET \"/products\" for 77.28.49.250 at 2017-10-26 11:12:20 +0000 2017-10-26T11:12:20.627450+00:00 app[web.1]: I, [2017-10-26T11:12:20.627362 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b] Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms) 2017-10-26T11:12:20.620440+00:00 app[web.1]: I, [2017-10-26T11:12:20.620310 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b] Processing by ProductsController#index as HTML 2017-10-26T11:12:20.627118+00:00 app[web.1]: I, [2017-10-26T11:12:20.627036 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b]   Rendered products/index.html.erb within layouts/application (1.3ms) 2017-10-26T11:12:20.625648+00:00 app[web.1]: I, [2017-10-26T11:12:20.625514 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b]   Rendering products/index.html.erb within layouts/application 2017-10-26T11:12:20.630449+00:00 app[web.1]: F, [2017-10-26T11:12:20.630355 #4] FATAL -- : [1777bede-3744-427b-b71a-3edffb8b056b] SyntaxError (/app/app/views/products/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input): 2017-10-26T11:12:20.630346+00:00 app[web.1]: F, [2017-10-26T11:12:20.628925 #4] FATAL -- : [1777bede-3744-427b-b71a-3edffb8b056b]    2017-10-26T11:12:20.630535+00:00 app[web.1]: F, [2017-10-26T11:12:20.630449 #4] FATAL -- : [1777bede-3744-427b-b71a-3edffb8b056b]    2017-10-26T11:12:20.630630+00:00 app[web.1]: F, [2017-10-26T11:12:20.630548 #4] FATAL -- : [1777bede-3744-427b-b71a-3edffb8b056b] app/views/products/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input 2017-10-26T11:12:23.075182+00:00 heroku[router]: at=info method=GET path=\"/\" host=aqueous-atoll-10174.herokuapp.com request_id=0da8e67b-430d-46f4-967b-05c63a658726 fwd=\"77.28.49.250\" dyno=web.1 connect=0ms service=19ms status=200 bytes=4221 protocol=https 2017-10-26T11:12:23.060128+00:00 app[web.1]: I, [2017-10-26T11:12:23.060035 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726] Started GET \"/\" for 77.28.49.250 at 2017-10-26 11:12:23 +0000 2017-10-26T11:12:23.064043+00:00 app[web.1]: I, [2017-10-26T11:12:23.061641 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726] Processing by StaticPagesController#landing_page as HTML 2017-10-26T11:12:23.066688+00:00 app[web.1]: I, [2017-10-26T11:12:23.066586 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726]   Rendering static_pages/landing_page.html.erb within layouts/application 2017-10-26T11:12:23.070977+00:00 app[web.1]: D, [2017-10-26T11:12:23.070891 #4] DEBUG -- : [0da8e67b-430d-46f4-967b-05c63a658726]   Product Load (1.7ms)  SELECT  \"products\".* FROM \"products\" LIMIT $1  [[\"LIMIT\", 3]] 2017-10-26T11:12:23.072028+00:00 app[web.1]: I, [2017-10-26T11:12:23.071903 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726]   Rendered static_pages/landing_page.html.erb within layouts/application (5.1ms) 2017-10-26T11:12:23.073495+00:00 app[web.1]: I, [2017-10-26T11:12:23.073399 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726] Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.7ms) 2017-10-26T11:12:24.787865+00:00 heroku[router]: at=info method=GET path=\"/favicon.ico\" host=aqueous-atoll-10174.herokuapp.com request_id=208c6d88-a0f5-40d6-bd2f-13671171e7a7 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=5ms status=304 bytes=48 protocol=https 2017-10-26T11:12:24.762792+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=056c1523-747d-4c18-9e77-e757e14f1468 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=11ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:24.753235+00:00 app[web.1]: I, [2017-10-26T11:12:24.753115 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:24 +0000 2017-10-26T11:12:24.754744+00:00 app[web.1]: I, [2017-10-26T11:12:24.754619 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:24.756841+00:00 app[web.1]: I, [2017-10-26T11:12:24.756758 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:24.758118+00:00 app[web.1]: I, [2017-10-26T11:12:24.758025 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468]   Rendered static_pages/index.html.erb within layouts/application (1.1ms) 2017-10-26T11:12:24.760280+00:00 app[web.1]: I, [2017-10-26T11:12:24.760192 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468] Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:24.966742+00:00 heroku[router]: at=info method=GET path=\"/assets/image2-275dcb8e7b31937149b0b9461f40008c9bb281f47aeecf8c139165c785214100.jpg\" host=aqueous-atoll-10174.herokuapp.com request_id=f36e1a25-03e3-4161-981a-2dc3ea5299b1 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=14ms status=200 bytes=229829 protocol=https 2017-10-26T11:12:26.986731+00:00 heroku[router]: at=info method=GET path=\"/static_pages/contact\" host=aqueous-atoll-10174.herokuapp.com request_id=54f612fa-8384-48bf-b6db-9b57cf338fbd fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=7ms status=200 bytes=3031 protocol=https 2017-10-26T11:12:26.981325+00:00 app[web.1]: I, [2017-10-26T11:12:26.981209 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd] Started GET \"/static_pages/contact\" for 77.28.49.250 at 2017-10-26 11:12:26 +0000 2017-10-26T11:12:26.982361+00:00 app[web.1]: I, [2017-10-26T11:12:26.982298 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd] Processing by StaticPagesController#contact as HTML 2017-10-26T11:12:26.983800+00:00 app[web.1]: I, [2017-10-26T11:12:26.983730 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd]   Rendering static_pages/contact.html.erb within layouts/application 2017-10-26T11:12:26.984295+00:00 app[web.1]: I, [2017-10-26T11:12:26.984232 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd]   Rendered static_pages/contact.html.erb within layouts/application (0.4ms) 2017-10-26T11:12:26.985415+00:00 app[web.1]: I, [2017-10-26T11:12:26.985354 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd] Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:28.870710+00:00 heroku[router]: at=info method=GET path=\"/favicon.ico\" host=aqueous-atoll-10174.herokuapp.com request_id=5a704d57-d3aa-4f47-b02f-fb650b8f1e23 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https 2017-10-26T11:12:28.865068+00:00 heroku[router]: at=info method=GET path=\"/static_pages/about\" host=aqueous-atoll-10174.herokuapp.com request_id=3d3ec370-b775-4262-9c58-feea94203a4d fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=10ms status=200 bytes=2987 protocol=https 2017-10-26T11:12:28.856224+00:00 app[web.1]: I, [2017-10-26T11:12:28.856092 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d] Started GET \"/static_pages/about\" for 77.28.49.250 at 2017-10-26 11:12:28 +0000 2017-10-26T11:12:28.857673+00:00 app[web.1]: I, [2017-10-26T11:12:28.857521 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d] Processing by StaticPagesController#about as HTML 2017-10-26T11:12:28.860653+00:00 app[web.1]: I, [2017-10-26T11:12:28.860574 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d]   Rendering static_pages/about.html.erb within layouts/application 2017-10-26T11:12:28.861531+00:00 app[web.1]: I, [2017-10-26T11:12:28.861456 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d]   Rendered static_pages/about.html.erb within layouts/application (0.7ms) 2017-10-26T11:12:28.863430+00:00 app[web.1]: I, [2017-10-26T11:12:28.863342 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d] Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:30.364888+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=af9c429a-8ced-4abf-935c-d11294445ec1 fwd=\"77.28.49.250\" dyno=web.1 connect=0ms service=7ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:30.359191+00:00 app[web.1]: I, [2017-10-26T11:12:30.359022 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:30 +0000 2017-10-26T11:12:30.360166+00:00 app[web.1]: I, [2017-10-26T11:12:30.360090 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:30.361413+00:00 app[web.1]: I, [2017-10-26T11:12:30.361341 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:30.361857+00:00 app[web.1]: I, [2017-10-26T11:12:30.361787 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1]   Rendered static_pages/index.html.erb within layouts/application (0.3ms) 2017-10-26T11:12:30.363132+00:00 app[web.1]: I, [2017-10-26T11:12:30.363063 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1] Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:32.238626+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=cf3f1a65-d921-47ce-b226-bd4c90dd0c0a fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=12ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:32.228618+00:00 app[web.1]: I, [2017-10-26T11:12:32.228525 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:32 +0000 2017-10-26T11:12:32.230373+00:00 app[web.1]: I, [2017-10-26T11:12:32.230283 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:32.232430+00:00 app[web.1]: I, [2017-10-26T11:12:32.232362 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:32.232830+00:00 app[web.1]: I, [2017-10-26T11:12:32.232769 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a]   Rendered static_pages/index.html.erb within layouts/application (0.2ms) 2017-10-26T11:12:32.236596+00:00 app[web.1]: I, [2017-10-26T11:12:32.236506 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a] Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:35.388018+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=beab0d75-93de-4e01-8046-b4e877fa9ba1 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=10ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:35.382196+00:00 app[web.1]: I, [2017-10-26T11:12:35.382080 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:35 +0000 2017-10-26T11:12:35.383289+00:00 app[web.1]: I, [2017-10-26T11:12:35.383232 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:35.384239+00:00 app[web.1]: I, [2017-10-26T11:12:35.384148 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:35.384657+00:00 app[web.1]: I, [2017-10-26T11:12:35.384592 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1]   Rendered static_pages/index.html.erb within layouts/application (0.3ms) 2017-10-26T11:12:35.386001+00:00 app[web.1]: I, [2017-10-26T11:12:35.385927 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1] Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:35.456835+00:00 heroku[router]: at=info method=GET path=\"/favicon.ico\" host=aqueous-atoll-10174.herokuapp.com request_id=0e3d9338-2740-4dfe-9382-62f0aa749853 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https 2017-10-26T11:12:36.717009+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=7ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:36.711168+00:00 app[web.1]: I, [2017-10-26T11:12:36.711073 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:36 +0000 2017-10-26T11:12:36.712296+00:00 app[web.1]: I, [2017-10-26T11:12:36.712222 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:36.713699+00:00 app[web.1]: I, [2017-10-26T11:12:36.713618 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:36.714179+00:00 app[web.1]: I, [2017-10-26T11:12:36.714108 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070]   Rendered static_pages/index.html.erb within layouts/application (0.3ms) 2017-10-26T11:12:36.715536+00:00 app[web.1]: I, [2017-10-26T11:12:36.715459 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070] Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms) 2017-10-26T11:19:47.037000+00:00 heroku[web.1]: Restarting 2017-10-26T11:19:47.038061+00:00 heroku[web.1]: State changed from up to starting 2017-10-26T11:19:47.773336+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish 2017-10-26T11:19:47.774084+00:00 app[web.1]: === puma shutdown: 2017-10-26 11:19:47 +0000 === 2017-10-26T11:19:47.774118+00:00 app[web.1]: - Goodbye! 2017-10-26T11:19:47.774286+00:00 app[web.1]: Exiting 2017-10-26T11:19:47.764618+00:00 heroku[web.1]: Stopping all processes with SIGTERM 2017-10-26T11:19:47.919696+00:00 heroku[web.1]: Process exited with status 143 2017-10-26T11:19:49.835774+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 10178 -e production` 2017-10-26T11:19:54.559715+00:00 heroku[web.1]: State changed from starting to up 2017-10-26T11:19:54.526941+00:00 app[web.1]: => Rails 5.1.4 application starting in production  2017-10-26T11:19:54.526942+00:00 app[web.1]: Puma starting in single mode... 2017-10-26T11:19:54.526910+00:00 app[web.1]: => Booting Puma 2017-10-26T11:19:54.526941+00:00 app[web.1]: => Run `rails server -h` for more startup options 2017-10-26T11:19:54.526947+00:00 app[web.1]: * Version 3.10.0 (ruby 2.3.4-p301), codename: Russell's Teapot 2017-10-26T11:19:54.526948+00:00 app[web.1]: * Min threads: 5, max threads: 5 2017-10-26T11:19:54.526948+00:00 app[web.1]: * Environment: production 2017-10-26T11:19:54.526986+00:00 app[web.1]: * Listening on tcp://0.0.0.0:10178 2017-10-26T11:19:54.527401+00:00 app[web.1]: Use Ctrl-C to stop 2017-10-26T11:20:16.521735+00:00 heroku[router]: at=info method=GET path=\"/\" host=aqueous-atoll-10174.herokuapp.com request_id=cb15b740-bc2e-4557-9121-3638790ae7c4 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=113ms status=500 bytes=1827 protocol=https 2017-10-26T11:20:16.411855+00:00 app[web.1]: I, [2017-10-26T11:20:16.411746 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] Started GET \"/\" for 77.28.49.250 at 2017-10-26 11:20:16 +0000 2017-10-26T11:20:16.418042+00:00 app[web.1]: I, [2017-10-26T11:20:16.417966 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] Processing by StaticPagesController#landing_page as HTML 2017-10-26T11:20:16.432074+00:00 app[web.1]: I, [2017-10-26T11:20:16.431963 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]   Rendering static_pages/landing_page.html.erb within layouts/application 2017-10-26T11:20:16.488988+00:00 app[web.1]: D, [2017-10-26T11:20:16.488888 #4] DEBUG -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]   Product Load (1.7ms)  SELECT  \"products\".* FROM \"products\" LIMIT $1  [[\"LIMIT\", 3]] 2017-10-26T11:20:16.518679+00:00 app[web.1]: I, [2017-10-26T11:20:16.518588 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]   Rendered static_pages/landing_page.html.erb within layouts/application (86.5ms) 2017-10-26T11:20:16.518862+00:00 app[web.1]: I, [2017-10-26T11:20:16.518802 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] Completed 500 Internal Server Error in 101ms (ActiveRecord: 28.3ms) 2017-10-26T11:20:16.519595+00:00 app[web.1]: F, [2017-10-26T11:20:16.519539 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]    2017-10-26T11:20:16.519648+00:00 app[web.1]: F, [2017-10-26T11:20:16.519599 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] ActionView::Template::Error (nil is not a valid asset source): 2017-10-26T11:20:16.519808+00:00 app[web.1]: F, [2017-10-26T11:20:16.519753 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]     12:   <div class=\"carousel-inner\" role=\"listbox\"> 2017-10-26T11:20:16.519809+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     13:     <% @products.each do |product| %> 2017-10-26T11:20:16.519809+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     14:     <div class=\"item<%= \" active\" if product == @products.first %>\"> 2017-10-26T11:20:16.519810+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     15:       <%= image_tag(product.image_url) %> 2017-10-26T11:20:16.519810+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     16:       <div class=\"carousel-caption\"> 2017-10-26T11:20:16.519811+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     17:         <%= product.name %> 2017-10-26T11:20:16.519812+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     18:       </div> 2017-10-26T11:20:16.519846+00:00 app[web.1]: F, [2017-10-26T11:20:16.519804 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]    2017-10-26T11:20:16.519892+00:00 app[web.1]: F, [2017-10-26T11:20:16.519850 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] app/views/static_pages/landing_page.html.erb:15:in `block in _app_views_static_pages_landing_page_html_erb__3063560626232123492_21319380' 2017-10-26T11:20:16.519893+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4] app/views/static_pages/landing_page.html.erb:13:in `_app_views_static_pages_landing_page_html_erb__3063560626232123492_21319380' 2017-10-26T11:20:16.850375+00:00 heroku[router]: at=info method=GET path=\"/favicon.ico\" host=aqueous-atoll-10174.herokuapp.com request_id=f2c61de6-c308-4eb2-aacc-9386748580a2 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=2ms status=200 bytes=143 protocol=https", "colour"=>"Blue", "price"=>"10"}, "commit"=>"Create Product"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "5.2 New Product added"], ["description", ""], ["image_url", "2017-10-26T11:12:20.617289+00:00 app[web.1]: I, [2017-10-26T11:12:20.616996 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b] Started GET \"/products\" for 77.28.49.250 at 2017-10-26 11:12:20 +0000 2017-10-26T11:12:20.627450+00:00 app[web.1]: I, [2017-10-26T11:12:20.627362 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b] Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms) 2017-10-26T11:12:20.620440+00:00 app[web.1]: I, [2017-10-26T11:12:20.620310 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b] Processing by ProductsController#index as HTML 2017-10-26T11:12:20.627118+00:00 app[web.1]: I, [2017-10-26T11:12:20.627036 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b]   Rendered products/index.html.erb within layouts/application (1.3ms) 2017-10-26T11:12:20.625648+00:00 app[web.1]: I, [2017-10-26T11:12:20.625514 #4]  INFO -- : [1777bede-3744-427b-b71a-3edffb8b056b]   Rendering products/index.html.erb within layouts/application 2017-10-26T11:12:20.630449+00:00 app[web.1]: F, [2017-10-26T11:12:20.630355 #4] FATAL -- : [1777bede-3744-427b-b71a-3edffb8b056b] SyntaxError (/app/app/views/products/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input): 2017-10-26T11:12:20.630346+00:00 app[web.1]: F, [2017-10-26T11:12:20.628925 #4] FATAL -- : [1777bede-3744-427b-b71a-3edffb8b056b]    2017-10-26T11:12:20.630535+00:00 app[web.1]: F, [2017-10-26T11:12:20.630449 #4] FATAL -- : [1777bede-3744-427b-b71a-3edffb8b056b]    2017-10-26T11:12:20.630630+00:00 app[web.1]: F, [2017-10-26T11:12:20.630548 #4] FATAL -- : [1777bede-3744-427b-b71a-3edffb8b056b] app/views/products/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input 2017-10-26T11:12:23.075182+00:00 heroku[router]: at=info method=GET path=\"/\" host=aqueous-atoll-10174.herokuapp.com request_id=0da8e67b-430d-46f4-967b-05c63a658726 fwd=\"77.28.49.250\" dyno=web.1 connect=0ms service=19ms status=200 bytes=4221 protocol=https 2017-10-26T11:12:23.060128+00:00 app[web.1]: I, [2017-10-26T11:12:23.060035 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726] Started GET \"/\" for 77.28.49.250 at 2017-10-26 11:12:23 +0000 2017-10-26T11:12:23.064043+00:00 app[web.1]: I, [2017-10-26T11:12:23.061641 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726] Processing by StaticPagesController#landing_page as HTML 2017-10-26T11:12:23.066688+00:00 app[web.1]: I, [2017-10-26T11:12:23.066586 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726]   Rendering static_pages/landing_page.html.erb within layouts/application 2017-10-26T11:12:23.070977+00:00 app[web.1]: D, [2017-10-26T11:12:23.070891 #4] DEBUG -- : [0da8e67b-430d-46f4-967b-05c63a658726]   Product Load (1.7ms)  SELECT  \"products\".* FROM \"products\" LIMIT $1  [[\"LIMIT\", 3]] 2017-10-26T11:12:23.072028+00:00 app[web.1]: I, [2017-10-26T11:12:23.071903 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726]   Rendered static_pages/landing_page.html.erb within layouts/application (5.1ms) 2017-10-26T11:12:23.073495+00:00 app[web.1]: I, [2017-10-26T11:12:23.073399 #4]  INFO -- : [0da8e67b-430d-46f4-967b-05c63a658726] Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.7ms) 2017-10-26T11:12:24.787865+00:00 heroku[router]: at=info method=GET path=\"/favicon.ico\" host=aqueous-atoll-10174.herokuapp.com request_id=208c6d88-a0f5-40d6-bd2f-13671171e7a7 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=5ms status=304 bytes=48 protocol=https 2017-10-26T11:12:24.762792+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=056c1523-747d-4c18-9e77-e757e14f1468 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=11ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:24.753235+00:00 app[web.1]: I, [2017-10-26T11:12:24.753115 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:24 +0000 2017-10-26T11:12:24.754744+00:00 app[web.1]: I, [2017-10-26T11:12:24.754619 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:24.756841+00:00 app[web.1]: I, [2017-10-26T11:12:24.756758 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:24.758118+00:00 app[web.1]: I, [2017-10-26T11:12:24.758025 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468]   Rendered static_pages/index.html.erb within layouts/application (1.1ms) 2017-10-26T11:12:24.760280+00:00 app[web.1]: I, [2017-10-26T11:12:24.760192 #4]  INFO -- : [056c1523-747d-4c18-9e77-e757e14f1468] Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:24.966742+00:00 heroku[router]: at=info method=GET path=\"/assets/image2-275dcb8e7b31937149b0b9461f40008c9bb281f47aeecf8c139165c785214100.jpg\" host=aqueous-atoll-10174.herokuapp.com request_id=f36e1a25-03e3-4161-981a-2dc3ea5299b1 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=14ms status=200 bytes=229829 protocol=https 2017-10-26T11:12:26.986731+00:00 heroku[router]: at=info method=GET path=\"/static_pages/contact\" host=aqueous-atoll-10174.herokuapp.com request_id=54f612fa-8384-48bf-b6db-9b57cf338fbd fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=7ms status=200 bytes=3031 protocol=https 2017-10-26T11:12:26.981325+00:00 app[web.1]: I, [2017-10-26T11:12:26.981209 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd] Started GET \"/static_pages/contact\" for 77.28.49.250 at 2017-10-26 11:12:26 +0000 2017-10-26T11:12:26.982361+00:00 app[web.1]: I, [2017-10-26T11:12:26.982298 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd] Processing by StaticPagesController#contact as HTML 2017-10-26T11:12:26.983800+00:00 app[web.1]: I, [2017-10-26T11:12:26.983730 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd]   Rendering static_pages/contact.html.erb within layouts/application 2017-10-26T11:12:26.984295+00:00 app[web.1]: I, [2017-10-26T11:12:26.984232 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd]   Rendered static_pages/contact.html.erb within layouts/application (0.4ms) 2017-10-26T11:12:26.985415+00:00 app[web.1]: I, [2017-10-26T11:12:26.985354 #4]  INFO -- : [54f612fa-8384-48bf-b6db-9b57cf338fbd] Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:28.870710+00:00 heroku[router]: at=info method=GET path=\"/favicon.ico\" host=aqueous-atoll-10174.herokuapp.com request_id=5a704d57-d3aa-4f47-b02f-fb650b8f1e23 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https 2017-10-26T11:12:28.865068+00:00 heroku[router]: at=info method=GET path=\"/static_pages/about\" host=aqueous-atoll-10174.herokuapp.com request_id=3d3ec370-b775-4262-9c58-feea94203a4d fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=10ms status=200 bytes=2987 protocol=https 2017-10-26T11:12:28.856224+00:00 app[web.1]: I, [2017-10-26T11:12:28.856092 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d] Started GET \"/static_pages/about\" for 77.28.49.250 at 2017-10-26 11:12:28 +0000 2017-10-26T11:12:28.857673+00:00 app[web.1]: I, [2017-10-26T11:12:28.857521 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d] Processing by StaticPagesController#about as HTML 2017-10-26T11:12:28.860653+00:00 app[web.1]: I, [2017-10-26T11:12:28.860574 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d]   Rendering static_pages/about.html.erb within layouts/application 2017-10-26T11:12:28.861531+00:00 app[web.1]: I, [2017-10-26T11:12:28.861456 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d]   Rendered static_pages/about.html.erb within layouts/application (0.7ms) 2017-10-26T11:12:28.863430+00:00 app[web.1]: I, [2017-10-26T11:12:28.863342 #4]  INFO -- : [3d3ec370-b775-4262-9c58-feea94203a4d] Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:30.364888+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=af9c429a-8ced-4abf-935c-d11294445ec1 fwd=\"77.28.49.250\" dyno=web.1 connect=0ms service=7ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:30.359191+00:00 app[web.1]: I, [2017-10-26T11:12:30.359022 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:30 +0000 2017-10-26T11:12:30.360166+00:00 app[web.1]: I, [2017-10-26T11:12:30.360090 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:30.361413+00:00 app[web.1]: I, [2017-10-26T11:12:30.361341 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:30.361857+00:00 app[web.1]: I, [2017-10-26T11:12:30.361787 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1]   Rendered static_pages/index.html.erb within layouts/application (0.3ms) 2017-10-26T11:12:30.363132+00:00 app[web.1]: I, [2017-10-26T11:12:30.363063 #4]  INFO -- : [af9c429a-8ced-4abf-935c-d11294445ec1] Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:32.238626+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=cf3f1a65-d921-47ce-b226-bd4c90dd0c0a fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=12ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:32.228618+00:00 app[web.1]: I, [2017-10-26T11:12:32.228525 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:32 +0000 2017-10-26T11:12:32.230373+00:00 app[web.1]: I, [2017-10-26T11:12:32.230283 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:32.232430+00:00 app[web.1]: I, [2017-10-26T11:12:32.232362 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:32.232830+00:00 app[web.1]: I, [2017-10-26T11:12:32.232769 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a]   Rendered static_pages/index.html.erb within layouts/application (0.2ms) 2017-10-26T11:12:32.236596+00:00 app[web.1]: I, [2017-10-26T11:12:32.236506 #4]  INFO -- : [cf3f1a65-d921-47ce-b226-bd4c90dd0c0a] Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:35.388018+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=beab0d75-93de-4e01-8046-b4e877fa9ba1 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=10ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:35.382196+00:00 app[web.1]: I, [2017-10-26T11:12:35.382080 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:35 +0000 2017-10-26T11:12:35.383289+00:00 app[web.1]: I, [2017-10-26T11:12:35.383232 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:35.384239+00:00 app[web.1]: I, [2017-10-26T11:12:35.384148 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:35.384657+00:00 app[web.1]: I, [2017-10-26T11:12:35.384592 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1]   Rendered static_pages/index.html.erb within layouts/application (0.3ms) 2017-10-26T11:12:35.386001+00:00 app[web.1]: I, [2017-10-26T11:12:35.385927 #4]  INFO -- : [beab0d75-93de-4e01-8046-b4e877fa9ba1] Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms) 2017-10-26T11:12:35.456835+00:00 heroku[router]: at=info method=GET path=\"/favicon.ico\" host=aqueous-atoll-10174.herokuapp.com request_id=0e3d9338-2740-4dfe-9382-62f0aa749853 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https 2017-10-26T11:12:36.717009+00:00 heroku[router]: at=info method=GET path=\"/static_pages/index\" host=aqueous-atoll-10174.herokuapp.com request_id=eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=7ms status=200 bytes=3167 protocol=https 2017-10-26T11:12:36.711168+00:00 app[web.1]: I, [2017-10-26T11:12:36.711073 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070] Started GET \"/static_pages/index\" for 77.28.49.250 at 2017-10-26 11:12:36 +0000 2017-10-26T11:12:36.712296+00:00 app[web.1]: I, [2017-10-26T11:12:36.712222 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070] Processing by StaticPagesController#index as HTML 2017-10-26T11:12:36.713699+00:00 app[web.1]: I, [2017-10-26T11:12:36.713618 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070]   Rendering static_pages/index.html.erb within layouts/application 2017-10-26T11:12:36.714179+00:00 app[web.1]: I, [2017-10-26T11:12:36.714108 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070]   Rendered static_pages/index.html.erb within layouts/application (0.3ms) 2017-10-26T11:12:36.715536+00:00 app[web.1]: I, [2017-10-26T11:12:36.715459 #4]  INFO -- : [eb8eeaa9-6c0f-43ac-b836-f6ffc06ab070] Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms) 2017-10-26T11:19:47.037000+00:00 heroku[web.1]: Restarting 2017-10-26T11:19:47.038061+00:00 heroku[web.1]: State changed from up to starting 2017-10-26T11:19:47.773336+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish 2017-10-26T11:19:47.774084+00:00 app[web.1]: === puma shutdown: 2017-10-26 11:19:47 +0000 === 2017-10-26T11:19:47.774118+00:00 app[web.1]: - Goodbye! 2017-10-26T11:19:47.774286+00:00 app[web.1]: Exiting 2017-10-26T11:19:47.764618+00:00 heroku[web.1]: Stopping all processes with SIGTERM 2017-10-26T11:19:47.919696+00:00 heroku[web.1]: Process exited with status 143 2017-10-26T11:19:49.835774+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 10178 -e production` 2017-10-26T11:19:54.559715+00:00 heroku[web.1]: State changed from starting to up 2017-10-26T11:19:54.526941+00:00 app[web.1]: => Rails 5.1.4 application starting in production  2017-10-26T11:19:54.526942+00:00 app[web.1]: Puma starting in single mode... 2017-10-26T11:19:54.526910+00:00 app[web.1]: => Booting Puma 2017-10-26T11:19:54.526941+00:00 app[web.1]: => Run `rails server -h` for more startup options 2017-10-26T11:19:54.526947+00:00 app[web.1]: * Version 3.10.0 (ruby 2.3.4-p301), codename: Russell's Teapot 2017-10-26T11:19:54.526948+00:00 app[web.1]: * Min threads: 5, max threads: 5 2017-10-26T11:19:54.526948+00:00 app[web.1]: * Environment: production 2017-10-26T11:19:54.526986+00:00 app[web.1]: * Listening on tcp://0.0.0.0:10178 2017-10-26T11:19:54.527401+00:00 app[web.1]: Use Ctrl-C to stop 2017-10-26T11:20:16.521735+00:00 heroku[router]: at=info method=GET path=\"/\" host=aqueous-atoll-10174.herokuapp.com request_id=cb15b740-bc2e-4557-9121-3638790ae7c4 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=113ms status=500 bytes=1827 protocol=https 2017-10-26T11:20:16.411855+00:00 app[web.1]: I, [2017-10-26T11:20:16.411746 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] Started GET \"/\" for 77.28.49.250 at 2017-10-26 11:20:16 +0000 2017-10-26T11:20:16.418042+00:00 app[web.1]: I, [2017-10-26T11:20:16.417966 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] Processing by StaticPagesController#landing_page as HTML 2017-10-26T11:20:16.432074+00:00 app[web.1]: I, [2017-10-26T11:20:16.431963 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]   Rendering static_pages/landing_page.html.erb within layouts/application 2017-10-26T11:20:16.488988+00:00 app[web.1]: D, [2017-10-26T11:20:16.488888 #4] DEBUG -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]   Product Load (1.7ms)  SELECT  \"products\".* FROM \"products\" LIMIT $1  [[\"LIMIT\", 3]] 2017-10-26T11:20:16.518679+00:00 app[web.1]: I, [2017-10-26T11:20:16.518588 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]   Rendered static_pages/landing_page.html.erb within layouts/application (86.5ms) 2017-10-26T11:20:16.518862+00:00 app[web.1]: I, [2017-10-26T11:20:16.518802 #4]  INFO -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] Completed 500 Internal Server Error in 101ms (ActiveRecord: 28.3ms) 2017-10-26T11:20:16.519595+00:00 app[web.1]: F, [2017-10-26T11:20:16.519539 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]    2017-10-26T11:20:16.519648+00:00 app[web.1]: F, [2017-10-26T11:20:16.519599 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] ActionView::Template::Error (nil is not a valid asset source): 2017-10-26T11:20:16.519808+00:00 app[web.1]: F, [2017-10-26T11:20:16.519753 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]     12:   <div class=\"carousel-inner\" role=\"listbox\"> 2017-10-26T11:20:16.519809+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     13:     <% @products.each do |product| %> 2017-10-26T11:20:16.519809+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     14:     <div class=\"item<%= \" active\" if product == @products.first %>\"> 2017-10-26T11:20:16.519810+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     15:       <%= image_tag(product.image_url) %> 2017-10-26T11:20:16.519810+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     16:       <div class=\"carousel-caption\"> 2017-10-26T11:20:16.519811+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     17:         <%= product.name %> 2017-10-26T11:20:16.519812+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4]     18:       </div> 2017-10-26T11:20:16.519846+00:00 app[web.1]: F, [2017-10-26T11:20:16.519804 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4]    2017-10-26T11:20:16.519892+00:00 app[web.1]: F, [2017-10-26T11:20:16.519850 #4] FATAL -- : [cb15b740-bc2e-4557-9121-3638790ae7c4] app/views/static_pages/landing_page.html.erb:15:in `block in _app_views_static_pages_landing_page_html_erb__3063560626232123492_21319380' 2017-10-26T11:20:16.519893+00:00 app[web.1]: [cb15b740-bc2e-4557-9121-3638790ae7c4] app/views/static_pages/landing_page.html.erb:13:in `_app_views_static_pages_landing_page_html_erb__3063560626232123492_21319380' 2017-10-26T11:20:16.850375+00:00 heroku[router]: at=info method=GET path=\"/favicon.ico\" host=aqueous-atoll-10174.herokuapp.com request_id=f2c61de6-c308-4eb2-aacc-9386748580a2 fwd=\"77.28.49.250\" dyno=web.1 connect=1ms service=2ms status=200 bytes=143 protocol=https"], ["created_at", "2017-10-26 11:36:49.598208"], ["updated_at", "2017-10-26 11:36:49.598208"], ["colour", "Blue"], ["price", 10]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://rubyonrails-bredzepi.c9users.io/products/5
+Completed 302 Found in 142ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/products/5" for 77.28.49.250 at 2017-10-26 11:36:49 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/5/edit" for 77.28.49.250 at 2017-10-26 11:37:07 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.6ms)
+  Rendered products/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 143ms (Views: 140.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/products/5" for 77.28.49.250 at 2017-10-26 11:37:15 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"obfRNHcl/gIsZ9LeK3VUE6q2OAiqon07A45n+Apq6MmdJRsNXtdec15mGtvKfvVbYI/ZyTzPyREFLeXN2wWNpA==", "product"=>{"name"=>"5.2 New Product added", "description"=>"", "image_url"=>"", "colour"=>"Blue", "price"=>"10"}, "commit"=>"Update Product", "id"=>"5"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "products" SET "image_url" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_url", ""], ["updated_at", "2017-10-26 11:37:15.599029"], ["id", 5]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://rubyonrails-bredzepi.c9users.io/products/5
+Completed 302 Found in 10ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/products/5" for 77.28.49.250 at 2017-10-26 11:37:16 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 77.28.49.250 at 2017-10-26 11:37:19 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (1.8ms)
+  Rendered products/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/4/edit" for 77.28.49.250 at 2017-10-26 11:37:22 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.8ms)
+  Rendered products/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 159ms (Views: 157.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/5/edit" for 77.28.49.250 at 2017-10-26 11:37:30 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.0ms)
+  Rendered products/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 129ms (Views: 126.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/products/5" for 77.28.49.250 at 2017-10-26 11:37:34 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DXSubxctY20G7ukI7TLRnHC8PPl/HHcC5UEsuOIwZjIx5mRWPt/DHHTvIQ0MOXDUuoXdOOlxwyjj4q6NM18DXw==", "product"=>{"name"=>"5.2 New Product added", "description"=>"", "image_url"=>"http://media.istockphoto.com/photos/kitten-on-a-white-background-picture-id511458158?k=6&m=511458158&s=170667a&w=0&h=YS27-I0nj5x89iDRUZ2YxE77hEghPb0HNCWwPCrMmn8=", "colour"=>"Blue", "price"=>"10"}, "commit"=>"Update Product", "id"=>"5"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "products" SET "image_url" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_url", "http://media.istockphoto.com/photos/kitten-on-a-white-background-picture-id511458158?k=6&m=511458158&s=170667a&w=0&h=YS27-I0nj5x89iDRUZ2YxE77hEghPb0HNCWwPCrMmn8="], ["updated_at", "2017-10-26 11:37:34.615100"], ["id", 5]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://rubyonrails-bredzepi.c9users.io/products/5
+Completed 302 Found in 9ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/products/5" for 77.28.49.250 at 2017-10-26 11:37:34 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 77.28.49.250 at 2017-10-26 11:40:20 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (1.8ms)
+  Rendered products/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/products/5" for 77.28.49.250 at 2017-10-26 11:40:25 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3uNzVwLdSyrfRmTpoxm6YQWIL6QNUhsA8ft9JIzyQMnJWSItyCICbrSPyqWC9CmH9CmKA8+zorflPSg5y5YlJQ==", "id"=>"5"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 5]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://rubyonrails-bredzepi.c9users.io/products
+Completed 302 Found in 8ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/products" for 77.28.49.250 at 2017-10-26 11:40:25 +0000
+Cannot render console from 77.28.49.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [4 times] (1.7ms)
+  Rendered products/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/edit" for 77.29.192.254 at 2017-10-29 10:53:33 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+pg (0.21.0) lib/pg.rb:56:in `initialize'
+pg (0.21.0) lib/pg.rb:56:in `new'
+pg (0.21.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:695:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products" for 77.29.192.254 at 2017-10-29 10:53:38 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+pg (0.21.0) lib/pg.rb:56:in `initialize'
+pg (0.21.0) lib/pg.rb:56:in `new'
+pg (0.21.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:695:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/products" for 77.29.192.254 at 2017-10-29 10:54:10 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (6.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [4 times] (2.8ms)
+  Rendered products/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 346ms (Views: 323.8ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/products/1/edit" for 77.29.192.254 at 2017-10-29 10:54:15 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (18.4ms)
+  Rendered products/edit.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 109ms (Views: 98.5ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/products/1" for 77.29.192.254 at 2017-10-29 10:54:23 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DaIiWtiOnahYlyS/Qy3QWHlpxdg2wzYeHFpFlLqaWQRK95hBosij2scD6fYndK6NzKWScTfkxISq3dtwBVcsoA==", "product"=>{"name"=>"console-generated product", "description"=>"I created this product without using the HTML form!", "image_url"=>"http://via.placeholder.com/350x150", "colour"=>"", "price"=>""}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "products" SET "image_url" = $1, "colour" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_url", "http://via.placeholder.com/350x150"], ["colour", ""], ["updated_at", "2017-10-29 10:54:23.393761"], ["id", 1]]
+  [1m[35m (120.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://rubyonrails-bredzepi.c9users.io/products/1
+Completed 302 Found in 133ms (ActiveRecord: 122.8ms)
+
+
+Started GET "/products/1" for 77.29.192.254 at 2017-10-29 10:54:23 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 78ms (Views: 73.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 77.29.192.254 at 2017-10-29 10:54:27 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [4 times] (2.4ms)
+  Rendered products/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 191ms (Views: 189.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2/edit" for 77.29.192.254 at 2017-10-29 10:54:35 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.7ms)
+  Rendered products/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/products/2" for 77.29.192.254 at 2017-10-29 10:54:40 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jbF5Eld2SSsiufbdr+K8PwrLtwDCtP+HcLSj+/5o5eh0fwFVA6l0QGGrIPQAYUkqKda/CDcL/KaCbdUTla2OQg==", "product"=>{"name"=>"seed-generated product", "description"=>"I also created this product without using the HTML form!", "image_url"=>"http://via.placeholder.com/350x150", "colour"=>"", "price"=>""}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "products" SET "image_url" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_url", "http://via.placeholder.com/350x150"], ["updated_at", "2017-10-29 10:54:40.317884"], ["id", 2]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://rubyonrails-bredzepi.c9users.io/products/2
+Completed 302 Found in 12ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/products/2" for 77.29.192.254 at 2017-10-29 10:54:41 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 122ms (Views: 119.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 77.29.192.254 at 2017-10-29 10:54:44 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [4 times] (2.1ms)
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/4/edit" for 77.29.192.254 at 2017-10-29 10:54:48 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.3ms)
+  Rendered products/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 198ms (Views: 195.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/products/4" for 77.29.192.254 at 2017-10-29 10:54:52 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uywx0/MGD8zNQhJto53O5tSkkrroLBmNvwtzj9obgETgKM4wO/Uu1iZkpJP0Ke96DPNgz7aIk10vnvoZ8Wsv3g==", "product"=>{"name"=>"Test Product", "description"=>"Lorem Ipsum", "image_url"=>"http://via.placeholder.com/350x150", "colour"=>"", "price"=>""}, "commit"=>"Update Product", "id"=>"4"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "products" SET "image_url" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_url", "http://via.placeholder.com/350x150"], ["updated_at", "2017-10-29 10:54:52.796232"], ["id", 4]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://rubyonrails-bredzepi.c9users.io/products/4
+Completed 302 Found in 10ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/products/4" for 77.29.192.254 at 2017-10-29 10:54:52 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 77.29.192.254 at 2017-10-29 10:54:55 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [4 times] (3.5ms)
+  Rendered products/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 81ms (Views: 78.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/3/edit" for 77.29.192.254 at 2017-10-29 10:54:58 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.5ms)
+  Rendered products/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 204ms (Views: 201.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/products/3" for 77.29.192.254 at 2017-10-29 10:55:03 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j4CkwPzMnzcgtCxMpxxtd3IPe8oSSzrr7Aznarlhgod4SWlT7hN4hKACafRDPTb4G9OSXypbPWnizQ9VazunIA==", "product"=>{"name"=>"seed-generated product", "description"=>"I also created this product without using the HTML form!", "image_url"=>"http://via.placeholder.com/350x150", "colour"=>"", "price"=>""}, "commit"=>"Update Product", "id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "products" SET "image_url" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_url", "http://via.placeholder.com/350x150"], ["updated_at", "2017-10-29 10:55:03.931525"], ["id", 3]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://rubyonrails-bredzepi.c9users.io/products/3
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/products/3" for 77.29.192.254 at 2017-10-29 10:55:04 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 63ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 77.29.192.254 at 2017-10-29 10:55:05 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [4 times] (2.1ms)
+  Rendered products/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 140ms (Views: 138.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/index" for 77.29.192.254 at 2017-10-29 10:55:10 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 71ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 77.29.192.254 at 2017-10-29 10:55:17 +0000
+Cannot render console from 77.29.192.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.5ms)
+
+
