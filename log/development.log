@@ -5315,3 +5315,22 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 66.58.246.230 at 2018-01-11 08:14:42 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 181ms (Views: 179.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 66.58.246.230 at 2018-01-11 08:14:44 +0000
+Cannot render console from 66.58.246.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (2.4ms)
+  Rendered products/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.5ms)
+
+
